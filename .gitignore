@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+.venv/
+pyproject.toml
+src/
+uv.lock
