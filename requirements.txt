@@ -57,6 +57,8 @@ fonttools==4.54.1
     # via matplotlib
 fqdn==1.5.1
     # via jsonschema
+functions==0.7.0
+    # via final-project-ironhack (pyproject.toml)
 h11==0.14.0
     # via httpcore
 httpcore==1.0.5
@@ -69,6 +71,10 @@ idna==3.10
     #   httpx
     #   jsonschema
     #   requests
+imbalanced-learn==0.12.3
+    # via imblearn
+imblearn==0.0
+    # via final-project-ironhack (pyproject.toml)
 ipykernel==6.29.5
     # via
     #   final-project-ironhack (pyproject.toml)
@@ -93,7 +99,9 @@ jinja2==3.1.4
     #   jupyterlab-server
     #   nbconvert
 joblib==1.4.2
-    # via scikit-learn
+    # via
+    #   imbalanced-learn
+    #   scikit-learn
 json5==0.9.25
     # via jupyterlab-server
 jsonpointer==3.0.0
@@ -188,6 +196,7 @@ notebook-shim==0.2.4
 numpy==2.1.1
     # via
     #   contourpy
+    #   imbalanced-learn
     #   matplotlib
     #   pandas
     #   patsy
@@ -195,6 +204,7 @@ numpy==2.1.1
     #   scipy
     #   seaborn
     #   statsmodels
+    #   xgboost
 overrides==7.7.0
     # via jupyter-server
 packaging==24.1
@@ -287,12 +297,16 @@ rpds-py==0.20.0
     #   jsonschema
     #   referencing
 scikit-learn==1.5.2
-    # via final-project-ironhack (pyproject.toml)
+    # via
+    #   final-project-ironhack (pyproject.toml)
+    #   imbalanced-learn
 scipy==1.14.1
     # via
     #   final-project-ironhack (pyproject.toml)
+    #   imbalanced-learn
     #   scikit-learn
     #   statsmodels
+    #   xgboost
 seaborn==0.13.2
     # via final-project-ironhack (pyproject.toml)
 send2trash==1.8.3
@@ -323,7 +337,9 @@ terminado==0.18.1
     #   jupyter-server
     #   jupyter-server-terminals
 threadpoolctl==3.5.0
-    # via scikit-learn
+    # via
+    #   imbalanced-learn
+    #   scikit-learn
 tinycss2==1.3.0
     # via nbconvert
 tornado==6.4.1
@@ -370,3 +386,5 @@ websocket-client==1.8.0
     # via jupyter-server
 widgetsnbextension==4.0.13
     # via ipywidgets
+xgboost==2.1.1
+    # via final-project-ironhack (pyproject.toml)
