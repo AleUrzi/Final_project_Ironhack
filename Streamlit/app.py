@@ -7,7 +7,7 @@ import seaborn as sns
 # Load your dataset
 @st.cache_resource()
 def load_data():
-    return pd.read_csv('../Data/Clean/cleaned_df_fetal_health.csv')  # Replace with your dataset path
+    return pd.read_csv('cleaned_df_fetal_health.csv')  # Replace with your dataset path
 
 # Load the trained model and preprocessing functions
 @st.cache_resource()
