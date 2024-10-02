@@ -94,30 +94,35 @@ def predict_fetal_health(input_data):
     return label_encoder.inverse_transform(prediction)[0]
 
 # Visualization function for box plots
+# Visualization function for box plots
 def plot_boxplots(data):
     features = data.columns.drop('fetal_health')  # Exclude the fetal_health column
     for feature in features:
-        plt.figure(figsize=(10, 5))
+        # Create a new figure and axes
+        fig, ax = plt.subplots(figsize=(10, 5))
         
         # Create a box plot with specified order of categories
-        sns.boxplot(x='fetal_health', y=feature, data=data, palette="Set2", order=["Normal", "Suspect", "Pathological"])
+        sns.boxplot(x='fetal_health', y=feature, data=data, palette="Set2", order=["Normal", "Suspect", "Pathological"], ax=ax)
         
         # Calculate and annotate min and max values for each category
         min_values = data.groupby('fetal_health')[feature].min()
         max_values = data.groupby('fetal_health')[feature].max()
         
         for i, (min_val, max_val) in enumerate(zip(min_values, max_values)):
-            plt.text(i, min_val, f'Min: {min_val:.2f}', horizontalalignment='center', color='blue', fontsize=10, weight='bold')
-            plt.text(i, max_val, f'Max: {max_val:.2f}', horizontalalignment='center', color='red', fontsize=10, weight='bold')
+            ax.text(i, min_val, f'Min: {min_val:.2f}', horizontalalignment='center', color='blue', fontsize=10, weight='bold')
+            ax.text(i, max_val, f'Max: {max_val:.2f}', horizontalalignment='center', color='red', fontsize=10, weight='bold')
 
-        plt.title(f'Box Plot of {feature} by Fetal Health Classification')
-        plt.xlabel('Fetal Health')
-        plt.ylabel(feature)
-        plt.xticks([0, 1, 2], ['Normal', 'Suspect', 'Pathological'])  # Correct labels
-        plt.grid(axis='y')
-        plt.tight_layout()
-        st.pyplot(plt)
-
+        ax.set_title(f'Box Plot of {feature} by Fetal Health Classification')
+        ax.set_xlabel('Fetal Health')
+        ax.set_ylabel(feature)
+        ax.set_xticklabels(['Normal', 'Suspect', 'Pathological'])  # Correct labels
+        ax.grid(axis='y')
+        
+        # Display the plot in Streamlit
+        st.pyplot(fig)
+        
+        # Clear the current figure to avoid overlap
+        plt.clf()
 # Main Streamlit interface
 def main():
     st.title("FetalHealth")
