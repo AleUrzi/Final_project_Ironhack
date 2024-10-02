@@ -14,16 +14,19 @@ def load_data():
 
 # Load the trained model and preprocessing functions
 @st.cache_resource()
-def load_model():
-    return joblib.load('xgb_model.pkl')  # Save the model as 'xgb_model.pkl'
+def load_model():    
+    model_path = os.path.join(os.path.dirname(__file__), 'xgb_model.pkl')
+    return joblib.load(model_path)
 
 @st.cache_resource()
 def load_scaler():
-    return joblib.load('scaler.pkl')  # Save the scaler as 'scaler.pkl'
+    scaler_path = os.path.join(os.path.dirname(__file__), 'scaler.pkl')
+    return joblib.load(scaler_path)
 
 @st.cache_resource()
 def load_label_encoder():
-    return joblib.load('label_encoder.pkl')  # Save the label encoder as 'label_encoder.pkl'
+    econder_path = os.path.join(os.path.dirname(__file__), 'label_encoder.pkl')
+    return joblib.load(econder_path)
 
 # User input for CTG parameters
 def user_input_features():
