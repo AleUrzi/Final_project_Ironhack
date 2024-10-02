@@ -3,11 +3,14 @@ import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # Load your dataset
 @st.cache_resource()
 def load_data():
-    return pd.read_csv('cleaned_df_fetal_health.csv')  # Replace with your dataset path
+    file_path = os.path.join(os.path.dirname(__file__), 'cleaned_df_fetal_health.csv')
+    return pd.read_csv(file_path)
+
 
 # Load the trained model and preprocessing functions
 @st.cache_resource()
