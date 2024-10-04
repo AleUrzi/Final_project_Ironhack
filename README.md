@@ -8,7 +8,9 @@ Cardiotocography (CTG) is a continuous recording of the fetal heart rate obtaine
 
 A cardiotocography (CTG) test is a medical procedure that monitors a pregnant woman's fetal heartbeat and uterine contractions. It's often performed during the third trimester, and is used to assess the baby's well-being, identify problems, and monitor the baby's response during labor. The CTG monitors several different measures, including: Uterine contractions, Baseline heart rate, Variability, Accelerations, and Decelerations. The CTG is typically recommended for pregnancies with an increased risk of complications. The recommended duration of CTG monitoring is 30 minutes, but the duration can be prolonged if the FHR pattern looks suspicious. The fetal heart rate (FHR) is classified into: Baseline fetal heart rate, Oscillations, Oscillation amplitude (range), and Long-term oscillations (oscillation rate). Factors that can affect FHR include: Maternal, Fetoplacental, Fetal, and Exogenous.
 
-PROBLEM: Analysing CTGs and drawing conclusions is challenging, especially in underdeveloped countries due to a shortage of skilled medical professionals
+PROBLEM 
+
+Analysing CTGs and drawing conclusions is challenging, especially in underdeveloped countries due to a shortage of skilled medical professionals
 
 In this study, a ML model was developed to solve this issue 
 
@@ -24,9 +26,9 @@ DATA PRE-PROCESSING:
 - dropped 13 duplicated values
 
 EDA
-- Target distribution and proportion
-- Feature distribution with box plots and histograms
-- correlation matrix
+- Target distribution of value counts and proportions
+- Features distribution with box plots and histograms
+- correlation matrix for numerical features
 - Feature importance
 
 MACHINE LEARNING
