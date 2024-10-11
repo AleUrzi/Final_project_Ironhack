@@ -33,9 +33,12 @@ EDA
 
 MACHINE LEARNING
 - Solved target imbalance with SMOTE
-- Robust Scaler
+- Applied Robust Scaler
 - Label encoder (only for XGBoost Model, then decodified for interpretation)
 - Trained 5 models: KNN, AdaBoost, GradientBoost, RF, and XGBoost
+
+TABLEAU DASHBOARD:
+https://public.tableau.com/app/profile/urzi.alessia/viz/final_project_Ironhack/Dashboard12
 
 STREAMLIT APP
 https://aleurzi-final-project-ironhack-streamlitapp-ln2uq4.streamlit.app/
